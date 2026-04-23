@@ -1,0 +1,42 @@
+# Core Architecture
+
+**Asuna** is a passive AI companion built to bridge the gap between digital activity and human reflection. Instead of relying on direct prompts, the system uses proactive behavioral mapping to learn from your digital footprint.
+
+## The Cognitive Model
+
+The architecture relies on a "Second Brain" concept, powered by the Gemini API and a local vector store, hosted on a single DigitalOcean droplet.
+
+- **Neural Memory**: Automatically embeds your browsing history into a vector store for semantic recall.
+- **Daily Neural Diary**: AI-generated entries synthesizing your day.
+- **Sunday Magazine**: A weekly deep-dive into your rabbit holes and shifting interests.
+
+## System Topology
+
+```text
+┌─────────────────────┐     Every 3 min       ┌──────────────────────┐
+│   Chrome Extension  │ ─────────────────────► │   asuna-backend      │
+│   (syncs history)   │   POST /history/sync   │   :3848 (PM2)        │
+└─────────────────────┘                        │                      │
+                                               │  • History storage   │
+┌─────────────────────┐                        │  • Diary generation  │
+│   Asuna Mobile      │ ◄────────────────────► │  • Magazine gen      │
+│   (Expo/RN)         │   REST API             │  • Interest analysis │
+└─────────────────────┘                        │  • Second Brain      │
+                                               │  • Proactive trigger │
+                                               └───────────┬──────────┘
+                                                           │ /api/recall
+                                                           │ /api/history
+                                                           ▼
+                                               ┌──────────────────────┐
+                                               │   whatsapp-ai-bot    │
+                                               │   :3847 (Docker)     │
+                                               │                      │
+                                               │  • WhatsApp chat     │
+                                               │  • Voice messages    │
+                                               └──────────────────────┘
+```
+
+## Proactive Empathy
+
+Most AI tools wait for you. Asuna watches patterns. 
+When the backend detects deep debugging or extended periods of complex planning, the WhatsApp Bot is triggered to send context-aware, empathetic voice or text messages. 
