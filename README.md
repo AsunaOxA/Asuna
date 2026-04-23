@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# asuna_web // living_technical_paper
 
-## Getting Started
+A high-end, immersive landing page for the Asuna AI ecosystem. Designed with a monochromatic technical dossier aesthetic, prioritizing architectural layout and academic-grade typography.
 
-First, run the development server:
+## 🌐 Ecosystem Nodes
+
+- **Backend Node**: [asuna-backend](https://github.com/AsunaOxA/asuna-backend)
+- **Mobile Node**: [asuna-mobile](https://github.com/AsunaOxA/asuna-mobile)
+- **Core Node**: [asuna-web](https://github.com/AsunaOxA/Asuna) (Current)
+
+## 🛠️ Technical Stack
+
+- **Framework**: Next.js 15+ (App Router)
+- **Styling**: Vanilla CSS / Semantic Variables
+- **Icons**: Lucide React
+- **Animations**: CSS Fade-ins / Scroll Reveal / Hand-drawn Micro-interactions
+
+## 🚀 Quick Start
 
 ```bash
+git clone https://github.com/AsunaOxA/Asuna.git
+cd Asuna
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the technical paper.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📖 Design Philosophy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The Asuna web interface is built as a **"Living Technical Paper"**. It moves beyond generic web templates to create an elite, system-focused interface that documents technical depth through:
+- Table of Contents structural precision.
+- Handwritten marginalia and creator logs.
+- Real-time system metrics and node identifiers.
+- A "Passive AI" presence that reacts to user interaction.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*part of the asuna ecosystem // personal build*
